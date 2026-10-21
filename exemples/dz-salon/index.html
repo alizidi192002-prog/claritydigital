@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>صالون لمسة ورد · سيدي بلعباس (مثال)</title>
+<meta name="description" content="مثال لموقع صفحة وحدة لصالون حلاقة نسائي، من تصميم Clarity Digital. محل خيالي.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf4f1;--paper:#fff;--ink:#2a1d1f;--muted:#76656a;--accent:#b4475f;--accent2:#f3c6c9;--line:#efdfe0;--hero:linear-gradient(160deg,#3a1520 0%,#7d2940 55%,#b4475f 100%)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Tajawal,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;font-size:17px}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.demo-note{background:var(--ink);color:var(--bg);text-align:center;font-size:13px;padding:8px 16px}
+.top{position:sticky;top:0;z-index:10;background:rgba(251,244,241,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;font-size:21px;text-decoration:none;line-height:1.2}
+.brand small{display:block;font-size:12px;color:var(--accent);font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--accent2);color:#3a1520;font-weight:800;text-decoration:none;padding:13px 24px;border-radius:999px;font-size:16px;white-space:nowrap}
+.btn.sm{padding:9px 18px;font-size:15px;background:var(--accent);color:#fff}
+.btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+.hero{background:var(--hero);color:#fff;padding:56px 0 78px}
+.eyebrow{font-size:14px;font-weight:700;color:var(--accent2)}
+.hero h1{font-size:clamp(34px,8vw,54px);line-height:1.2;margin:12px 0 14px;font-weight:800}
+.hero p{color:#f6dfe4;font-size:18px;max-width:540px;margin-bottom:26px}
+.ctas{display:flex;flex-wrap:wrap;gap:10px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:-36px;position:relative}
+.fact{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 12px;box-shadow:0 10px 30px -18px rgba(0,0,0,.35)}
+.fact b{display:block;color:var(--accent);font-size:16px}
+.fact span{font-size:13.5px;color:var(--muted);line-height:1.4;display:block}
+section{padding:52px 0}
+h2{font-size:clamp(28px,6vw,38px);font-weight:800;margin-bottom:4px}
+.sub{color:var(--muted);margin-bottom:24px}
+.groups{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.group{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px 20px 6px}
+.group h3{font-size:20px;color:var(--accent);padding-bottom:8px;margin-bottom:4px;border-bottom:2px solid var(--accent2)}
+.item{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line)}
+.item:last-child{border-bottom:0}
+.item .n{font-weight:700;display:block}
+.item em{font-style:normal;color:var(--muted);font-size:14px}
+.item .p{font-weight:800;white-space:nowrap}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card h3{font-size:21px;margin-bottom:10px}
+.row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row span:last-child{color:var(--muted)}
+.tel{display:inline-block;font-size:28px;font-weight:800;color:var(--accent);text-decoration:none;direction:ltr}
+footer{padding:26px 0 30px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.callbar{display:none}
+@media (max-width:760px){
+  .groups,.info{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:20;gap:10px}
+  .callbar a{flex:1;box-shadow:0 10px 24px rgba(0,0,0,.2)}
+  .callbar .alt{background:var(--accent);color:#fff}
+  footer{padding-bottom:90px}
+}
+</style>
+</head>
+<body>
+<div class="demo-note">مثال · محل خيالي · <a href="http://claritydigitalweb.com">Clarity Digital</a></div>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#">صالون لمسة ورد<small>حلاقة وتجميل نسائي · سيدي بلعباس</small></a>
+  <a class="btn sm" href="tel:+213555000000">عيطيلنا</a>
+</div></header>
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">تسريحات · صبغة · عرايس</div>
+  <h1>طلّة تشبهلك، بلا ما تستناي</h1>
+  <p>قص، صبغة، كيراتين وتجهيز العرايس في صالون هادي وسط المدينة. شوفي الأسعار واحجزي موعدك بنقرة.</p>
+  <div class="ctas"><a class="btn" href="tel:+213555000000">احجزي موعدك</a><a class="btn ghost" href="#tarifs">الأسعار</a></div>
+</div></section>
+<div class="wrap"><div class="facts">
+  <div class="fact"><b>عرايس</b><span>باقات كاملة</span></div>
+  <div class="fact"><b>مواعيد</b><span>حتى السبت</span></div>
+  <div class="fact"><b>منتوجات</b><span>بلا أمونياك</span></div>
+</div></div>
+<section id="tarifs"><div class="wrap">
+  <h2>الخدمات والأسعار</h2><p class="sub">أسعار تقريبية حسب طول الشعر.</p>
+  <div class="groups">
+    <div class="group"><h3>الشعر</h3>
+      <div class="item"><div><span class="n">قص وبروشينغ</span></div><span class="p">1,500 دج</span></div>
+      <div class="item"><div><span class="n">صبغة</span><em>الجذور</em></div><span class="p">2,500 دج</span></div>
+      <div class="item"><div><span class="n">كيراتين</span><em>حسب الطول</em></div><span class="p">من 6,000 دج</span></div>
+    </div>
+    <div class="group"><h3>العرايس</h3>
+      <div class="item"><div><span class="n">تسريحة + ماكياج</span></div><span class="p">من 12,000 دج</span></div>
+      <div class="item"><div><span class="n">تجربة قبل العرس</span></div><span class="p">4,000 دج</span></div>
+    </div>
+    <div class="group"><h3>العناية</h3>
+      <div class="item"><div><span class="n">مانيكير</span></div><span class="p">1,200 دج</span></div>
+      <div class="item"><div><span class="n">تنظيف البشرة</span></div><span class="p">2,500 دج</span></div>
+    </div>
+  </div>
+</div></section>
+<section style="padding-top:0"><div class="wrap">
+  <h2>معلومات عملية</h2><p class="sub">وسط المدينة، سيدي بلعباس</p>
+  <div class="info">
+    <div class="card"><h3>اتصلي بينا</h3>
+      <a class="tel" href="tel:+213555000000">0555 00 00 00</a>
+      <p style="color:var(--muted);margin:6px 0 16px">شارع خيالي، سيدي بلعباس</p>
+      <a class="btn" style="background:var(--accent);color:#fff" href="https://www.google.com/maps/search/?api=1&query=Sidi+Bel+Abbes" target="_blank" rel="noopener">الطريق في Google Maps</a>
+    </div>
+    <div class="card"><h3>أوقات العمل</h3>
+      <div class="row"><span>السبت – الخميس</span><span>9:00 – 18:00</span></div>
+      <div class="row"><span>الجمعة</span><span>مغلق</span></div>
+    </div>
+  </div>
+</div></section>
+<footer><div class="wrap"><span>© صالون لمسة ورد</span><span>موقع تجريبي · Clarity Digital</span></div></footer>
+<div class="callbar"><a class="btn" href="tel:+213555000000">عيطيلنا</a><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=Sidi+Bel+Abbes" target="_blank" rel="noopener">الطريق</a></div>
+</body>
+</html>

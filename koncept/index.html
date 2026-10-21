@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Koncept · Institut de Beauté à Oran</title>
+<meta name="description" content="Koncept, institut de beauté à Oran (Millenium) : coiffure, couleur, balayage, ongles, pédicure, soins visage, cils & sourcils, maquillage mariée. Prenez rendez-vous.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f7f2ea;--paper:#fffdf9;--ink:#2a2420;--muted:#7a6f66;--gold:#a8865a;--line:#e6dccd;--dark:#1f1a17}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Montserrat,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.demo{background:var(--dark);color:#e9e1d6;text-align:center;font-size:12.5px;padding:8px 16px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font-family:'Cormorant Garamond',serif;font-size:30px;letter-spacing:6px;font-weight:600}
+.nav-cta{border:1px solid var(--ink);padding:10px 18px;font-size:13px;letter-spacing:1px;text-transform:uppercase}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:40px 0 70px}
+.kick{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{font-family:'Cormorant Garamond',serif;font-size:62px;line-height:1.02;font-weight:600;margin:14px 0 18px}
+.lead{color:var(--muted);font-size:17px;max-width:470px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{background:var(--ink);color:#fff;padding:15px 24px;font-size:14px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.rating{margin-top:22px;font-size:14px;color:var(--muted)}
+.rating b{color:var(--gold);font-size:16px;letter-spacing:2px}
+.visual{aspect-ratio:4/5;background:linear-gradient(160deg,#e9dccb,#cdb497 60%,#a8865a);position:relative;overflow:hidden}
+.visual:before{content:"";position:absolute;inset:22px;border:1px solid rgba(255,255,255,.55)}
+.visual .mark{position:absolute;bottom:34px;left:34px;right:34px;color:#fff;font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1.2}
+.visual .mark small{display:block;font-family:Montserrat;font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:8px;opacity:.9}
+.visual .ph{position:absolute;top:34px;right:34px;background:rgba(255,255,255,.85);color:var(--ink);font-size:11px;padding:6px 10px;letter-spacing:1px}
+section{padding:70px 0}
+h2{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;line-height:1.1;margin:10px 0 14px}
+.sub{color:var(--muted);max-width:560px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.card{background:var(--paper);border:1px solid var(--line);padding:28px 24px}
+.card h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;margin-bottom:10px}
+.card ul{list-style:none}
+.card li{padding:7px 0;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;font-size:14.5px}
+.card li:last-child{border-bottom:0}
+.card li span{color:var(--gold);font-size:13px}
+.note{margin-top:20px;font-size:13px;color:var(--muted);font-style:italic}
+.band{background:var(--dark);color:#efe7dc}
+.band .sub{color:#b9ada0}
+.band .kick{color:#d6b98d}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.quote{font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.3}
+.pill{display:inline-block;border:1px solid #6d6157;padding:8px 14px;margin:6px 6px 0 0;font-size:13px}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.box{background:var(--paper);border:1px solid var(--line);padding:26px}
+.box h3{font-family:'Cormorant Garamond',serif;font-size:24px;margin-bottom:12px}
+.hours div{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.hours div:last-child{border:0}
+.closed{color:var(--muted)}
+.map{margin-top:14px;aspect-ratio:16/9;background:#e8e0d4;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
+footer{padding:36px 0 90px;text-align:center;color:var(--muted);font-size:13px}
+.float{position:fixed;left:16px;right:16px;bottom:14px;display:none;gap:10px;z-index:9}
+.float a{flex:1;text-align:center;background:var(--ink);color:#fff;padding:14px;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:1px}
+.float a.alt{background:var(--gold)}
+@media(max-width:860px){.hero,.split,.info{grid-template-columns:1fr}.grid{grid-template-columns:1fr}h1{font-size:46px}h2{font-size:36px}.nav-cta{display:none}.float{display:flex}.visual{aspect-ratio:4/3}}
+</style>
+</head>
+<body>
+<div class="demo">Maquette gratuite préparée pour Koncept par Clarity Digital · non publiée</div>
+<div class="wrap">
+  <nav><div class="logo">KONCEPT</div><a class="nav-cta" href="tel:+213554918839">Prendre rendez-vous</a></nav>
+  <div class="hero">
+    <div>
+      <div class="kick">Institut de beauté · Oran Millenium</div>
+      <h1>Skin, Nails, Hair &amp; Brow, au même endroit.</h1>
+      <p class="lead">Coiffure, couleur et balayage, ongles et pédicure, soins du visage, cils et sourcils, maquillage mariée. Un salon lumineux, une équipe formée à Paris.</p>
+      <div class="btns"><a class="btn" href="tel:+213554918839">Appeler · 0554 91 88 39</a><a class="btn alt" href="https://maps.app.goo.gl/sPsWhPKRbhtmSBHSA">Itinéraire</a></div>
+      <div class="rating"><b>★★★★★</b> 4,9 / 5 · 35 avis Google</div>
+    </div>
+    <div class="visual"><span class="ph">Vos photos du salon ici</span><div class="mark"><small>Formée à Paris</small>Elysées Marbeuf</div></div>
+  </div>
+</div>
+
+<section style="background:var(--paper)">
+  <div class="wrap">
+    <div class="kick">Prestations</div>
+    <h2>La carte des soins</h2>
+    <p class="sub">Toutes vos prestations sur une seule page : vos clientes voient tout avant d'appeler.</p>
+    <div class="grid">
+      <div class="card"><h3>Hair</h3><ul><li>Coupe <span>tarif</span></li><li>Brushing <span>tarif</span></li><li>Couleur <span>tarif</span></li><li>Balayage <span>tarif</span></li><li>Mèches <span>tarif</span></li><li>Soin capillaire <span>tarif</span></li></ul></div>
+      <div class="card"><h3>Nails</h3><ul><li>Manucure <span>tarif</span></li><li>Pose / gel <span>tarif</span></li><li>Pédicure <span>tarif</span></li><li>Soin des pieds <span>tarif</span></li></ul></div>
+      <div class="card"><h3>Skin &amp; Brow</h3><ul><li>Soin visage <span>tarif</span></li><li>Lashes <span>tarif</span></li><li>Brows <span>tarif</span></li><li>Makeup <span>tarif</span></li><li>Mariée 💍 <span>sur devis</span></li></ul></div>
+    </div>
+    <p class="note">Vos tarifs apparaîtront ici : envoyez-nous votre liste de prix et nous la mettons en ligne.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap split">
+    <div>
+      <div class="kick">L'esprit Koncept</div>
+      <h2>Un salon pensé comme un concept</h2>
+      <p class="sub">Formation à l'école Elysées Marbeuf à Paris, un espace clair et soigné, et le Bar Koncept pour patienter en douceur. Ici, on prend le temps.</p>
+      <div style="margin-top:18px"><span class="pill">Bar Koncept</span><span class="pill">Mariées</span><span class="pill">Balayage</span><span class="pill">Head care</span></div>
+    </div>
+    <div class="quote">« Un salon propre, lumineux, une équipe souriante et de bon conseil. »<div style="font-family:Montserrat;font-size:13px;color:#b9ada0;margin-top:14px">L'avis de vos clientes sur Google, résumé</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kick">Infos pratiques</div>
+    <h2>Nous trouver</h2>
+    <div class="info">
+      <div class="box hours"><h3>Horaires</h3>
+        <div><span>Lundi – Jeudi</span><span>10h – 18h</span></div>
+        <div><span>Vendredi</span><span>15h – 19h</span></div>
+        <div><span>Samedi</span><span>10h – 18h</span></div>
+        <div><span>Dimanche</span><span class="closed">Fermé</span></div>
+      </div>
+      <div class="box"><h3>Adresse</h3><p>Résidence Panorama 1, Promotion Ecobat<br>Bd Millenium 2, Oran</p><p style="margin-top:10px">📞 <a href="tel:+213554918839">0554 91 88 39</a> · <a href="tel:+21340526573">040 52 65 73</a></p><div class="map">Carte Google Maps intégrée ici</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>© Koncept · Institut de beauté à Oran<br>Maquette réalisée par Clarity Digital</footer>
+<div class="float"><a href="tel:+213554918839">Appeler</a><a class="alt" href="https://maps.app.goo.gl/sPsWhPKRbhtmSBHSA">Itinéraire</a></div>
+</body>
+</html>

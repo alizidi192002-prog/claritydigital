@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atelier Mèche &amp; Miel · Salon de coiffure à Lyon (exemple)</title>
+<meta name="description" content="Exemple de site d'une page pour un salon de coiffure, réalisé par Clarity Digital. Entreprise fictive.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Lora:ital,wght@0,500;0,700;1,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf5ef;--paper:#ffffff;--ink:#2a211c;--muted:#6f625a;--accent:#b5703a;--accent2:#f1c27d;--line:#eadfd3;--btn:#f1c27d;--btntxt:#2a211c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.brand{font-family:'Lora',Georgia,serif}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+.brand{font-weight:700;font-size:19px;text-decoration:none;color:var(--ink);line-height:1.1}
+.brand small{display:block;font-family:'Poppins',system-ui,sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-top:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--btn);color:var(--btntxt);font-weight:600;text-decoration:none;padding:13px 22px;border-radius:999px;font-size:15px;white-space:nowrap;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.sm{padding:9px 16px;font-size:14px;background:var(--accent);color:#fff}
+.btn.ghost{background:transparent;color:#fff8f0;border:1.5px solid color-mix(in srgb,#fff8f0 50%,transparent)}
+.hero{background:linear-gradient(160deg,#3b2a20 0%,#7a4a2a 60%,#b5703a 100%);color:#fff8f0;padding:64px 0 76px;position:relative;overflow:hidden}
+.hero .motif{position:absolute;right:-40px;bottom:-60px;width:220px;height:220px;color:var(--accent2);opacity:.16}
+.hero .motif svg{width:100%;height:100%}
+.eyebrow{font-size:12px;letter-spacing:2.2px;text-transform:uppercase;font-weight:600;color:var(--accent2)}
+.hero h1{font-size:clamp(34px,7vw,56px);line-height:1.08;margin:14px 0 16px;max-width:680px;font-weight:700;position:relative}
+.hero p{color:#f2dfcd;font-size:17px;max-width:540px;margin-bottom:28px;position:relative}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;position:relative}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:-34px;position:relative;z-index:2}
+.fact{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:0 10px 30px -18px rgba(0,0,0,.35)}
+.fact b{display:block;font-family:'Lora',Georgia,serif;font-size:17px;color:var(--accent);}
+.fact span{font-size:13.5px;color:var(--muted)}
+section{padding:64px 0}
+h2{font-size:clamp(28px,5vw,38px);line-height:1.15;margin-bottom:6px;}
+.sub{color:var(--muted);margin-bottom:28px}
+.groups{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.group{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px 20px 8px}
+.group h3{font-size:19px;color:var(--accent);padding-bottom:8px;margin-bottom:6px;border-bottom:2px solid var(--accent2);}
+.item{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line)}
+.item:last-child{border-bottom:0}
+.item .n{font-weight:600;display:block}
+.item em{font-style:normal;color:var(--muted);font-size:13.5px}
+.item .p{font-weight:700;color:var(--ink);white-space:nowrap}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px}
+.card h3{font-size:20px;margin-bottom:12px;}
+.row{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.row:last-child{border-bottom:0}
+.row span:last-child{color:var(--muted);text-align:right}
+.tel{display:inline-block;font-family:'Lora',Georgia,serif;font-size:26px;font-weight:700;color:var(--accent);text-decoration:none;margin:4px 0 8px}
+.addr{color:var(--muted);margin-bottom:16px}
+ul.x{list-style:none;margin-top:14px}
+ul.x li{padding:6px 0 6px 24px;position:relative;font-size:15px}
+ul.x li:before{content:"";position:absolute;left:3px;top:14px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.demo-note{background:var(--ink);color:var(--bg);text-align:center;font-size:13px;padding:10px 16px}
+.demo-note a{color:var(--accent2)}
+footer{padding:28px 0 32px;color:var(--muted);font-size:13.5px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.callbar{display:none}
+@media (max-width:760px){
+  .facts{grid-template-columns:1fr 1fr 1fr;gap:8px}
+  .fact{padding:12px 10px} .fact b{font-size:14px} .fact span{font-size:12px;line-height:1.35;display:block}
+  .groups,.info{grid-template-columns:1fr}
+  .hero{padding:48px 0 70px}
+  section{padding:48px 0}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:20;gap:10px}
+  .callbar a{flex:1;box-shadow:0 10px 24px rgba(0,0,0,.2)}
+  .callbar .alt{background:var(--accent);color:#fff}
+  footer{padding-bottom:90px}
+}
+</style>
+</head>
+<body>
+<div class="demo-note">Exemple · entreprise fictive · <a href="http://claritydigitalweb.com">Clarity Digital</a></div>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#">Atelier Mèche &amp; Miel<small>Salon de coiffure · Lyon</small></a>
+  <a class="btn sm" href="tel:+33199005678">Appeler</a>
+</div></header>
+<section class="hero"><div class="wrap">
+  <div class="motif"><svg viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3"><circle cx="100" cy="100" r="70"/><circle cx="100" cy="100" r="48"/><path d="M100 30v140M30 100h140"/></g></svg></div>
+  <div class="eyebrow">Coiffure femme · homme · enfant</div>
+  <h1>Une coupe qui vous ressemble, sans attendre</h1>
+  <p>Coupe, couleur et soins dans un salon calme du 6e arrondissement. Réservez en un clic.</p>
+  <div class="ctas"><a class="btn" href="tel:+33199005678">Prendre rendez-vous</a><a class="btn ghost" href="#tarifs">Prestations &amp; tarifs</a></div>
+</div></section>
+<div class="wrap"><div class="facts"><div class="fact"><b>Couleur</b><span>Produits sans ammoniaque</span></div><div class="fact"><b>RDV</b><span>Même le samedi</span></div><div class="fact"><b>Enfants</b><span>Coupe dès 3 ans</span></div></div></div>
+<section id="tarifs"><div class="wrap">
+  <h2>Prestations &amp; tarifs</h2><p class="sub">Tarifs indicatifs, cheveux courts à longs.</p>
+  <div class="groups"><div class="group"><h3>Femme</h3><div class="item"><div><span class="n">Shampoing, coupe, brushing</span></div><span class="p">45 – 60 €</span></div><div class="item"><div><span class="n">Couleur racines</span></div><span class="p">38 €</span></div><div class="item"><div><span class="n">Balayage</span><em>Sur devis après diagnostic</em></div><span class="p">dès 85 €</span></div></div><div class="group"><h3>Homme</h3><div class="item"><div><span class="n">Coupe homme</span></div><span class="p">26 €</span></div><div class="item"><div><span class="n">Coupe + barbe</span></div><span class="p">34 €</span></div></div><div class="group"><h3>Soins</h3><div class="item"><div><span class="n">Soin profond au miel</span><em>15 min</em></div><span class="p">15 €</span></div></div></div>
+</div></section>
+<section id="infos" style="padding-top:0"><div class="wrap">
+  <h2>Infos pratiques</h2><p class="sub">5 rue Vauban, 69006 Lyon</p>
+  <div class="info">
+    <div class="card"><h3>Nous contacter</h3>
+      <a class="tel" href="tel:+33199005678">01 99 00 56 78</a>
+      <p class="addr">5 rue Vauban, 69006 Lyon</p>
+      <a class="btn" style="background:var(--accent);color:#fff" href="https://www.google.com/maps/search/?api=1&amp;query=5+rue+Vauban,+69006+Lyon" target="_blank" rel="noopener">Itinéraire</a>
+      <ul class="x"><li>Réservation en ligne ou par téléphone</li><li>Carte bancaire acceptée</li><li>Wi-Fi &amp; café offert</li></ul>
+    </div>
+    <div class="card"><h3>Horaires</h3><div class="row"><span>Mardi – Vendredi</span><span>9h30 – 19h</span></div><div class="row"><span>Samedi</span><span>9h – 17h</span></div><div class="row"><span>Dimanche – Lundi</span><span>Fermé</span></div></div>
+  </div>
+</div></section>
+<footer><div class="wrap"><span>© Atelier Mèche &amp; Miel · Lyon</span><span>Site de démonstration · Clarity Digital</span></div></footer>
+<div class="callbar"><a class="btn" href="tel:+33199005678">Appeler</a><a class="btn alt" href="https://www.google.com/maps/search/?api=1&amp;query=5+rue+Vauban,+69006+Lyon" target="_blank" rel="noopener">Itinéraire</a></div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dar Kenza · ديكور البيت (مثال متجر)</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f3ec;--ink:#2b2620;--muted:#7b7166;--accent:#9c6b3f;--accent2:#e9d3b5;--line:#e8dfd2;--paper:#fff;--red:#c4453c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Tajawal,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+.strip{background:var(--ink);color:#f7f3ec;text-align:center;font-size:14px;padding:8px}
+.strip b{color:var(--accent2)}
+header{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.bar{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-size:24px;font-weight:800;letter-spacing:.5px}
+.logo span{color:var(--accent)}
+.cart{position:relative;width:42px;height:42px;border-radius:12px;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:20px}
+.cart i{position:absolute;top:-6px;left:-6px;background:var(--red);color:#fff;font-style:normal;font-size:12px;font-weight:800;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.hero{margin:16px 0;border-radius:22px;padding:34px 26px;background:linear-gradient(135deg,#3b2f24,#9c6b3f);color:#fff}
+.hero small{color:var(--accent2);font-weight:700}
+.hero h1{font-size:34px;line-height:1.25;margin:8px 0 10px}
+.hero p{color:#efe3d3;margin-bottom:18px}
+.btn{display:inline-block;background:var(--accent2);color:var(--ink);font-weight:800;padding:12px 24px;border-radius:12px}
+.cats{display:flex;gap:8px;overflow-x:auto;padding:4px 0 14px}
+.cats a{flex:none;background:var(--paper);border:1px solid var(--line);border-radius:99px;padding:8px 16px;font-weight:700;font-size:14px}
+.cats a.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.p{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.ph{height:170px;display:flex;align-items:center;justify-content:center;position:relative}
+.ph .off{position:absolute;top:10px;right:10px;background:var(--red);color:#fff;font-size:12px;font-weight:800;padding:3px 9px;border-radius:8px}
+.info{padding:12px 14px 14px}
+.info h3{font-size:16px;margin-bottom:4px}
+.pr{display:flex;gap:8px;align-items:baseline}
+.pr b{color:var(--red);font-size:18px}
+.pr s{color:var(--muted);font-size:14px}
+.add{display:block;text-align:center;margin-top:10px;background:var(--ink);color:#fff;border-radius:10px;padding:9px;font-weight:700;font-size:14px}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:26px 0}
+.trust div{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center;font-weight:700;font-size:14px}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:22px;border-top:1px solid var(--line)}
+@media(max-width:760px){.grid{grid-template-columns:1fr 1fr}.trust{grid-template-columns:1fr 1fr}.ph{height:140px}.hero h1{font-size:28px}}
+</style>
+</head>
+<body>
+<div class="strip">🚚 التوصيل لـ 58 ولاية · <b>الدفع عند الاستلام</b></div>
+<header><div class="wrap bar"><div class="logo">Dar <span>Kenza</span></div><div class="cart">🛒<i>2</i></div></div></header>
+<div class="wrap">
+  <div class="hero"><small>تشكيلة الخريف</small><h1>ديكور يدفّي دارك،<br>بأسعار معقولة</h1><p>مخدات، شموع، سلال ومفارش. اختاري واطلبي، وتخلّصي عند الاستلام.</p><a class="btn" href="#shop">تسوّقي الآن</a></div>
+  <div class="cats" id="shop"><a class="on" href="#">الكل</a><a href="#">مخدات</a><a href="#">شموع</a><a href="#">سلال</a><a href="#">مفارش</a><a href="#">مطبخ</a></div>
+  <div class="grid">
+    <div class="p"><div class="ph" style="background:#efe2cf"><span class="off">-20%</span><svg width="110" height="90"><rect x="5" y="10" width="100" height="70" rx="22" fill="#c9a77f"/><rect x="20" y="25" width="70" height="40" rx="14" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="4 6"/></svg></div><div class="info"><h3>مخدة كتان</h3><div class="pr"><b>1,600 دج</b><s>2,000 دج</s></div><a class="add" href="#">أضيفي للسلة</a></div></div>
+    <div class="p"><div class="ph" style="background:#e9e4dc"><svg width="80" height="110"><rect x="15" y="30" width="50" height="75" rx="10" fill="#f5efe6" stroke="#9c6b3f" stroke-width="3"/><path d="M40 8c8 10 8 16 0 20c-8-4-8-10 0-20z" fill="#e8a33d"/></svg></div><div class="info"><h3>شمعة معطّرة</h3><div class="pr"><b>900 دج</b></div><a class="add" href="#">أضيفي للسلة</a></div></div>
+    <div class="p"><div class="ph" style="background:#ece3d3"><span class="off">-15%</span><svg width="110" height="100"><path d="M10 40h90l-10 55H20z" fill="#b88b5c"/><path d="M25 40c0-30 60-30 60 0" fill="none" stroke="#7a5a3a" stroke-width="5"/><path d="M15 55h80M18 70h74M21 85h68" stroke="#e4cfae" stroke-width="3"/></svg></div><div class="info"><h3>سلة من الحلفاء</h3><div class="pr"><b>2,300 دج</b><s>2,700 دج</s></div><a class="add" href="#">أضيفي للسلة</a></div></div>
+    <div class="p"><div class="ph" style="background:#e6ded3"><svg width="120" height="80"><rect x="5" y="15" width="110" height="55" rx="6" fill="#d9c3a5"/><path d="M5 30h110M5 45h110M5 60h110" stroke="#9c6b3f" stroke-width="2"/></svg></div><div class="info"><h3>مفرش طاولة</h3><div class="pr"><b>2,800 دج</b></div><a class="add" href="#">أضيفي للسلة</a></div></div>
+  </div>
+  <div class="trust"><div>💵 الدفع عند الاستلام</div><div>🚚 58 ولاية</div><div>🔄 استبدال 7 أيام</div><div>📞 خدمة الزبائن</div></div>
+</div>
+<footer>مثال توضيحي لمتجر إلكتروني · علامة ومنتجات خيالية · <a href="../../lien/" style="color:#9c6b3f">Clarity Digital</a></footer>
+</body>
+</html>
