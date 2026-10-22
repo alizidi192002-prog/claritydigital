@@ -62,6 +62,15 @@ h2{font-family:Fraunces,serif;font-size:42px;line-height:1.1;margin:12px 0 10px}
 .qty button{width:32px;height:32px;border-radius:50%;border:0;background:#fff;cursor:pointer;font-size:18px;font-weight:700}
 .qty span{min-width:16px;text-align:center;font-weight:700}
 .note{font-size:12.5px;color:var(--muted);margin-top:14px;font-style:italic}
+.meter{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px 18px;margin-top:22px}
+.mtxt{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:14.5px;margin-bottom:10px}
+.mtxt span{color:var(--muted)}
+.mtxt span.ok{color:var(--green);font-weight:600}
+.bar{height:10px;background:var(--pink2);border-radius:999px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--rasp);border-radius:999px;transition:width .25s}
+.bar i.ok{background:var(--green)}
+#ccat .thumb{aspect-ratio:16/9;font-size:44px}
+.warn{background:#fff4e5;color:#8a5200;border-radius:12px;padding:10px 12px;font-size:13.5px;margin-top:12px;display:none}
 .order{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;margin-top:30px;align-items:start}
 .panel{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px}
 .panel h3{font-family:Fraunces,serif;font-size:22px;margin-bottom:14px}
@@ -112,7 +121,7 @@ footer a{color:#fff;font-weight:600}
       <span class="kick">Livraison 7j/7 · Alger</span>
       <h1>Le brunch <em>premium</em> livré chez vous.</h1>
       <p class="lead">Brunch box généreuses et cookies style New-Yorkais. Choisissez votre box, la date et l'heure de livraison, puis payez en ligne en 1 minute.</p>
-      <div class="btns"><a class="btn" href="#box">Voir les box</a><a class="btn alt" href="#commander">Commander</a></div>
+      <div class="btns"><a class="btn" href="#box">Brunch box</a><a class="btn alt" href="#cookies">Cookies</a></div>
       <div class="badges"><span>💗 101k abonnés</span><span>🚚 7j/7 sur Alger</span><span>💳 CIB · Edahabia</span></div>
     </div>
     <div class="visual"><div class="plate p1"></div><div class="plate p2"></div><div class="plate p3"></div><span class="ph">Vos photos de box ici</span></div>
@@ -124,7 +133,7 @@ footer a{color:#fff;font-weight:600}
     <span class="kick">Comment ça marche</span>
     <h2>Commandez en 3 étapes</h2>
     <div class="steps">
-      <div class="step"><b>1</b><h3>Choisissez vos box</h3><p>Brunch, cookies, box à partager : ajoutez ce que vous voulez au panier.</p></div>
+      <div class="step"><b>1</b><h3>Brunch box ou cookies</h3><p>Une brunch box, ou vos cookies au choix (minimum 10), ou les deux.</p></div>
       <div class="step"><b>2</b><h3>Date &amp; heure</h3><p>Choisissez le jour et le créneau de livraison, pour vous ou pour offrir.</p></div>
       <div class="step"><b>3</b><h3>Payez en ligne</h3><p>Carte CIB ou Edahabia, paiement sécurisé. Ou à la livraison si vous préférez.</p></div>
     </div>
@@ -133,11 +142,21 @@ footer a{color:#fff;font-weight:600}
 
 <section id="box">
   <div class="wrap">
-    <span class="kick">Nos box</span>
-    <h2>Faites-vous plaisir</h2>
-    <p class="sub">Chaque box est préparée le jour même, avec des produits frais.</p>
+    <span class="kick">Brunch box</span>
+    <h2>Nos brunch box</h2>
+    <p class="sub">Préparées le jour même, avec des produits frais. Envie de cookies en plus ? Ajoutez-les à l'unité juste en dessous.</p>
     <div class="cat" id="cat"></div>
-    <p class="note">Les noms, contenus et prix sont des exemples : nous mettrons votre vraie carte.</p>
+  </div>
+</section>
+
+<section id="cookies" style="padding-top:0">
+  <div class="wrap">
+    <span class="kick">Cookies style New-Yorkais</span>
+    <h2>Composez votre box de cookies</h2>
+    <p class="sub">Choisissez vos parfums, minimum 10 pièces au choix. Avec une brunch box, les cookies s'ajoutent à l'unité, sans minimum.</p>
+    <div class="meter"><div class="mtxt"><b id="ccount">0 cookie</b><span id="cmsg">Minimum 10 pièces au choix</span></div><div class="bar"><i id="cbar"></i></div></div>
+    <div class="cat" id="ccat"></div>
+    <p class="note">Les noms, contenus et prix sont des exemples : nous mettrons votre vraie carte et vos photos.</p>
   </div>
 </section>
 
@@ -166,6 +185,7 @@ footer a{color:#fff;font-weight:600}
         <div id="lines"></div>
         <div class="cart-line"><span>Livraison</span><span id="fee">—</span></div>
         <div class="tot"><span>Total</span><span id="total">0 DA</span></div>
+        <div class="warn" id="warn"></div>
         <label>Paiement</label>
         <div class="pay">
           <label class="payopt on" data-p="card"><input type="radio" name="p" checked><div><b>Carte CIB / Edahabia</b><small>Paiement en ligne sécurisé</small></div><span class="cards"><em style="background:#1b5e9a">CIB</em><em style="background:#e2a400">EDAHABIA</em></span></label>
@@ -209,28 +229,47 @@ footer a{color:#fff;font-weight:600}
 
 <script>
 const BOX=[
- {id:'solo',n:'Brunch Box Solo',d:'Viennoiseries, mini sandwichs, œuf, salade de fruits, granola et jus frais.',p:2900,e:'🥐',bg:'#fde8ef',t:'Pour 1'},
- {id:'duo',n:'Brunch Box Duo',d:'La box à deux : sandwichs, fruits frais, bowls granola, pancakes et 2 jus.',p:5400,e:'🥞',bg:'#fff1dc',t:'Pour 2'},
- {id:'share',n:'Box à partager',d:'Le grand plateau pour 4 à 6 : salé, sucré, fruits et boissons.',p:11900,e:'🧺',bg:'#e9f3ea',t:'4–6 pers.'},
- {id:'cookies',n:'Box Cookies NY',d:'6 cookies style New-Yorkais, dont le triple chocolat.',p:2400,e:'🍪',bg:'#f3e6da',t:'Best-seller'},
- {id:'love',n:'Box Love',d:'La box à offrir : douceurs, fruits rouges et petit mot personnalisé.',p:4500,e:'💗',bg:'#fbdbe7',t:'Cadeau'},
- {id:'juice',n:'Jus frais (x2)',d:'Orange pressée ou detox, en bouteille, à ajouter à votre box.',p:700,e:'🍊',bg:'#fff4d6',t:'Extra'}
+ {id:'solo',n:'Brunch Box Solo',d:'Viennoiseries, mini sandwichs, œuf, salade de fruits, granola et jus frais.',p:2900,e:'🥐',bg:'#fde8ef',t:'Pour 1',k:'b'},
+ {id:'duo',n:'Brunch Box Duo',d:'La box à deux : sandwichs, fruits frais, bowls granola, pancakes et 2 jus.',p:5400,e:'🥞',bg:'#fff1dc',t:'Pour 2',k:'b'},
+ {id:'share',n:'Box à partager',d:'Le grand plateau pour 4 à 6 : salé, sucré, fruits et boissons.',p:11900,e:'🧺',bg:'#e9f3ea',t:'4–6 pers.',k:'b'},
+ {id:'c1',n:'Triple chocolat',d:'Le best-seller, cœur fondant.',p:300,e:'🍪',bg:'#efe1d4',t:'Best-seller',k:'c'},
+ {id:'c2',n:'Pistache',d:'Pâte de pistache et éclats croquants.',p:350,e:'🍪',bg:'#e6f0dc',t:'Cookie',k:'c'},
+ {id:'c3',n:'Red velvet',d:'Cacao, chocolat blanc, couleur intense.',p:300,e:'🍪',bg:'#f8dbe2',t:'Cookie',k:'c'},
+ {id:'c4',n:'Lotus',d:'Spéculoos et cœur caramel.',p:350,e:'🍪',bg:'#f6e6cf',t:'Cookie',k:'c'},
+ {id:'c5',n:'Kinder',d:'Chocolat au lait et noisette.',p:350,e:'🍪',bg:'#fdeedd',t:'Cookie',k:'c'},
+ {id:'c6',n:'Classique pépites',d:'Le New-Yorkais d\'origine, pépites de chocolat.',p:250,e:'🍪',bg:'#f3e9dc',t:'Cookie',k:'c'}
 ];
+const MIN=10;
 const ZONES=[['Alger-Centre',400],['Hydra',400],['El Biar',400],['Ben Aknoun',400],['Kouba',450],['Bir Mourad Raïs',450],['Dely Ibrahim',500],['Chéraga',500],['Bab Ezzouar',500],['Draria',600],['Saïd Hamdine',400],['Bordj El Kiffan',600]];
 const SLOTS=['08h–10h','10h–12h','12h–14h','14h–16h','16h–18h','18h–20h'];
 const cart={};let slot=SLOTS[0];let pay='card';
 const f=n=>n.toLocaleString('fr-FR').replace(/ /g,' ')+' DA';
-const cat=document.getElementById('cat');
-BOX.forEach(b=>{cart[b.id]=0;cat.insertAdjacentHTML('beforeend',`<div class="card"><div class="thumb" style="background:${b.bg}"><small>${b.t}</small>${b.e}</div><div class="cbody"><h3>${b.n}</h3><p>${b.d}</p><div class="row"><span class="price">${f(b.p)}</span><div class="qty"><button data-id="${b.id}" data-d="-1">−</button><span id="q-${b.id}">0</span><button data-id="${b.id}" data-d="1">+</button></div></div></div></div>`)});
-cat.addEventListener('click',e=>{const t=e.target.closest('button');if(!t)return;cart[t.dataset.id]=Math.max(0,cart[t.dataset.id]+ +t.dataset.d);document.getElementById('q-'+t.dataset.id).textContent=cart[t.dataset.id];render()});
+const card=b=>`<div class="card"><div class="thumb" style="background:${b.bg}"><small>${b.t}</small>${b.e}</div><div class="cbody"><h3>${b.n}</h3><p>${b.d}</p><div class="row"><span class="price">${f(b.p)}${b.k=='c'?' <small style="font-weight:500;color:var(--muted);font-size:13px">/ pièce</small>':''}</span><div class="qty"><button data-id="${b.id}" data-d="-1">−</button><span id="q-${b.id}">0</span><button data-id="${b.id}" data-d="1">+</button></div></div></div></div>`;
+BOX.forEach(b=>{cart[b.id]=0;document.getElementById(b.k=='b'?'cat':'ccat').insertAdjacentHTML('beforeend',card(b))});
+document.querySelectorAll('#cat,#ccat').forEach(c=>c.addEventListener('click',e=>{const t=e.target.closest('button');if(!t)return;cart[t.dataset.id]=Math.max(0,cart[t.dataset.id]+ +t.dataset.d);document.getElementById('q-'+t.dataset.id).textContent=cart[t.dataset.id];render()}));
 const zone=document.getElementById('zone');ZONES.forEach(([z,p],i)=>zone.insertAdjacentHTML('beforeend',`<option value="${i}">${z} · ${f(p)}</option>`));zone.onchange=render;
 const sl=document.getElementById('slots');SLOTS.forEach((s,i)=>sl.insertAdjacentHTML('beforeend',`<button type="button" class="slot${i?'':' on'}">${s}</button>`));
 sl.addEventListener('click',e=>{const t=e.target.closest('.slot');if(!t)return;sl.querySelectorAll('.slot').forEach(x=>x.classList.remove('on'));t.classList.add('on');slot=t.textContent});
 const d=document.getElementById('date');const tm=new Date();tm.setDate(tm.getDate()+1);const iso=x=>x.toISOString().slice(0,10);d.min=iso(new Date());d.value=iso(tm);
 document.querySelectorAll('.payopt').forEach(o=>o.addEventListener('click',()=>{document.querySelectorAll('.payopt').forEach(x=>x.classList.remove('on'));o.classList.add('on');o.querySelector('input').checked=true;pay=o.dataset.p;render()}));
+const cnt=k=>BOX.filter(b=>b.k==k).reduce((s,b)=>s+cart[b.id],0);
 function sum(){return BOX.reduce((s,b)=>s+b.p*cart[b.id],0)}
-function render(){const L=document.getElementById('lines');const items=BOX.filter(b=>cart[b.id]);L.innerHTML=items.length?items.map(b=>`<div class="cart-line"><span>${cart[b.id]} × ${b.n}</span><span>${f(b.p*cart[b.id])}</span></div>`).join(''):'<p class="empty">Ajoutez une box avec le bouton +</p>';const fee=items.length?ZONES[zone.value][1]:0;document.getElementById('fee').textContent=items.length?f(fee):'—';const t=sum()+fee;document.getElementById('total').textContent=f(t);document.getElementById('stot').textContent=f(t);document.getElementById('go').textContent=(pay=='card'?'Payer ':'Commander · ')+f(t)}
-document.getElementById('go').onclick=()=>{if(!sum()){document.getElementById('box').scrollIntoView();return}const m=document.getElementById('modal');document.getElementById('mt').textContent=pay=='card'?'Paiement par carte (démo)':'Commande envoyée (démo)';document.getElementById('mp').textContent=pay=='card'?"Dans le vrai site, le client est redirigé vers la page de paiement sécurisée CIB / Edahabia, puis revient sur une page de confirmation. Vous recevez la commande avec la date et l'heure.":"Dans le vrai site, la commande vous arrive directement (WhatsApp / e-mail / tableau) avec la date et l'heure, et le client reçoit une confirmation.";const dt=new Date(d.value+'T12:00').toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'});document.getElementById('recap').innerHTML=BOX.filter(b=>cart[b.id]).map(b=>cart[b.id]+' × '+b.n).join('<br>')+`<br><br>📅 ${dt} · ${slot}<br>📍 ${ZONES[zone.value][0]}<br><b>Total : ${document.getElementById('total').textContent}</b>`;m.classList.add('on')};
+function ok(){const nb=cnt('b'),nc=cnt('c');return (nb+nc)>0&&(nb>0||nc>=MIN)}
+function render(){
+ const nb=cnt('b'),nc=cnt('c');
+ document.getElementById('ccount').textContent=nc+(nc>1?' cookies':' cookie');
+ const msg=document.getElementById('cmsg'),bar=document.getElementById('cbar');
+ bar.style.width=Math.min(100,nc/MIN*100)+'%';
+ if(nb>0){msg.textContent='Avec votre brunch box : cookies à l\'unité, sans minimum ✓';msg.className='ok';bar.style.width='100%';bar.className='ok'}
+ else if(nc>=MIN){msg.textContent='Minimum atteint ✓ ajoutez-en autant que vous voulez';msg.className='ok';bar.className='ok'}
+ else{msg.textContent=nc?`Encore ${MIN-nc} pour atteindre le minimum de ${MIN}`:`Minimum ${MIN} pièces au choix`;msg.className='';bar.className=''}
+ const L=document.getElementById('lines');const items=BOX.filter(b=>cart[b.id]);
+ L.innerHTML=items.length?items.map(b=>`<div class="cart-line"><span>${cart[b.id]} × ${b.k=='c'?'Cookie '+b.n:b.n}</span><span>${f(b.p*cart[b.id])}</span></div>`).join(''):'<p class="empty">Ajoutez une brunch box ou vos cookies avec le bouton +</p>';
+ const fee=items.length?ZONES[zone.value][1]:0;document.getElementById('fee').textContent=items.length?f(fee):'—';
+ const t=sum()+fee;document.getElementById('total').textContent=f(t);document.getElementById('stot').textContent=f(t);
+ const w=document.getElementById('warn');if(items.length&&!ok()){w.style.display='block';w.textContent=`Commande de cookies : minimum ${MIN} pièces au choix (encore ${MIN-nc}). Ou ajoutez une brunch box.`}else w.style.display='none';
+ const g=document.getElementById('go');g.textContent=(pay=='card'?'Payer ':'Commander · ')+f(t);g.style.opacity=ok()?1:.5}
+document.getElementById('go').onclick=()=>{if(!sum()){document.getElementById('box').scrollIntoView();return}if(!ok()){document.getElementById('cookies').scrollIntoView();return}const m=document.getElementById('modal');document.getElementById('mt').textContent=pay=='card'?'Paiement par carte (démo)':'Commande envoyée (démo)';document.getElementById('mp').textContent=pay=='card'?"Dans le vrai site, le client est redirigé vers la page de paiement sécurisée CIB / Edahabia, puis revient sur une page de confirmation. Vous recevez la commande avec la date et l'heure.":"Dans le vrai site, la commande vous arrive directement (WhatsApp / e-mail / tableau) avec la date et l'heure, et le client reçoit une confirmation.";const dt=new Date(d.value+'T12:00').toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'});document.getElementById('recap').innerHTML=BOX.filter(b=>cart[b.id]).map(b=>cart[b.id]+' × '+(b.k=='c'?'Cookie '+b.n:b.n)).join('<br>')+`<br><br>📅 ${dt} · ${slot}<br>📍 ${ZONES[zone.value][0]}<br><b>Total : ${document.getElementById('total').textContent}</b>`;m.classList.add('on')};
 render();
 </script>
 </body>
