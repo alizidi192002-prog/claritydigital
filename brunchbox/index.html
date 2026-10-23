@@ -3,275 +3,347 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Brunch Box · Brunch & cookies livrés à Alger</title>
-<meta name="description" content="The Brunch Box : brunch premium et cookies style New-Yorkais livrés 7j/7 à Alger. Commandez en ligne, choisissez la date et l'heure de livraison, payez par carte CIB ou Edahabia.">
+<title>The Brunch Box · Brunch premium & cookies livrés à Alger</title>
+<meta name="description" content="The Brunch Box : brunch box premium et cookies style New-Yorkais, livrés 7j/7 à Alger. Commandez en ligne, choisissez la date et l'heure de livraison, payez par carte CIB ou Edahabia.">
 <meta name="robots" content="noindex">
+<link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--cream:#fbf5f0;--paper:#fffdfb;--ink:#2b1d22;--muted:#7d6a70;--pink:#ec9dbd;--pink2:#f8dbe6;--rasp:#b3315f;--line:#efdfe4;--green:#2f7a52}
+:root{--pink:#e897bc;--pink2:#f9dfea;--pink3:#fdf2f6;--rasp:#c62d6e;--rasp2:#a3215a;--kraft:#c9a888;--kraft2:#f3ebe2;--ink:#2a1a20;--muted:#7e6970;--line:#f0dde5;--white:#fff}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{overflow-x:hidden}
+body{font-family:Jost,system-ui,sans-serif;background:var(--white);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit;color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
-.demo{background:var(--ink);color:#f3e6ea;text-align:center;font-size:12.5px;padding:8px 14px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
-.logo{display:flex;align-items:center;gap:10px;font-family:Fraunces,serif;font-weight:700;font-size:21px;letter-spacing:.5px}
-.logo i{width:40px;height:40px;border-radius:50%;background:var(--pink);display:grid;place-items:center;font-style:normal;color:var(--rasp);font-size:12px;font-weight:800;letter-spacing:1px;border:2px solid #fff;box-shadow:0 0 0 2px var(--pink)}
-.nav-cta{background:var(--rasp);color:#fff;padding:10px 18px;border-radius:999px;font-weight:600;font-size:14px}
-.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:34px 0 64px}
-.kick{display:inline-block;background:var(--pink2);color:var(--rasp);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:6px 12px;border-radius:999px}
-h1{font-family:Fraunces,serif;font-size:60px;line-height:1.02;margin:16px 0 16px;font-weight:700}
-h1 em{font-style:normal;color:var(--rasp)}
-.lead{font-size:17.5px;color:var(--muted);max-width:480px}
-.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
-.btn{background:var(--rasp);color:#fff;padding:15px 24px;border-radius:999px;font-weight:700;border:0;cursor:pointer}
-.btn.alt{background:transparent;border:1.5px solid var(--ink);color:var(--ink)}
-.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
-.badges span{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:13px;font-weight:500}
-.visual{position:relative;aspect-ratio:1/1;border-radius:28px;background:radial-gradient(circle at 30% 25%,#fff3f7 0,#f6c9da 45%,#e48fb2 100%);overflow:hidden}
-.plate{position:absolute;border-radius:50%;background:#fff;box-shadow:0 18px 40px -18px rgba(120,30,60,.45)}
-.p1{width:56%;aspect-ratio:1;left:8%;top:12%}
-.p2{width:36%;aspect-ratio:1;right:8%;top:8%}
-.p3{width:40%;aspect-ratio:1;right:12%;bottom:8%}
-.plate:after{content:"";position:absolute;inset:14%;border-radius:50%;background:conic-gradient(#f4b267 0 22%,#c9465f 0 38%,#f7e3b5 0 58%,#7fae6a 0 72%,#e98aa8 0 100%);opacity:.85}
-.p2:after{background:radial-gradient(circle,#8a5530 0 30%,#b57a45 31% 60%,#d9a46c 61%)}
-.p3:after{background:conic-gradient(#fbe7ef 0 30%,#b3315f 0 45%,#fff 0 70%,#f2c14e 0 100%)}
-.ph{position:absolute;left:18px;bottom:18px;background:rgba(255,255,255,.9);font-size:12px;padding:7px 11px;border-radius:10px;color:var(--muted)}
-section{padding:66px 0}
-h2{font-family:Fraunces,serif;font-size:42px;line-height:1.1;margin:12px 0 10px}
-.sub{color:var(--muted);max-width:600px}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
-.step{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px}
-.step b{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--pink2);color:var(--rasp);margin-bottom:12px}
-.step h3{font-size:17px;margin-bottom:4px}
-.step p{font-size:14.5px;color:var(--muted)}
-.cat{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
-.thumb{aspect-ratio:4/3;position:relative;display:grid;place-items:center;font-size:56px}
-.thumb small{position:absolute;left:12px;top:12px;background:#fff;border-radius:999px;font-size:11.5px;padding:4px 9px;font-weight:600;color:var(--rasp)}
-.cbody{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1}
-.cbody h3{font-family:Fraunces,serif;font-size:22px}
-.cbody p{font-size:14px;color:var(--muted);margin:6px 0 14px;flex:1}
-.row{display:flex;align-items:center;justify-content:space-between}
-.price{font-weight:700;font-size:18px}
-.qty{display:flex;align-items:center;gap:10px;background:var(--cream);border-radius:999px;padding:4px}
-.qty button{width:32px;height:32px;border-radius:50%;border:0;background:#fff;cursor:pointer;font-size:18px;font-weight:700}
-.qty span{min-width:16px;text-align:center;font-weight:700}
-.note{font-size:12.5px;color:var(--muted);margin-top:14px;font-style:italic}
-.meter{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px 18px;margin-top:22px}
-.mtxt{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:14.5px;margin-bottom:10px}
-.mtxt span{color:var(--muted)}
-.mtxt span.ok{color:var(--green);font-weight:600}
-.bar{height:10px;background:var(--pink2);border-radius:999px;overflow:hidden}
-.bar i{display:block;height:100%;width:0;background:var(--rasp);border-radius:999px;transition:width .25s}
-.bar i.ok{background:var(--green)}
-#ccat .thumb{aspect-ratio:16/9;font-size:44px}
-.warn{background:#fff4e5;color:#8a5200;border-radius:12px;padding:10px 12px;font-size:13.5px;margin-top:12px;display:none}
-.order{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;margin-top:30px;align-items:start}
-.panel{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px}
-.panel h3{font-family:Fraunces,serif;font-size:22px;margin-bottom:14px}
-label{display:block;font-size:13px;font-weight:600;margin:12px 0 6px}
-input,select,textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;outline:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.serif{font-family:'Playfair Display',serif}
+.demo{background:var(--ink);color:#f3dbe5;text-align:center;font-size:12.5px;padding:8px 14px;letter-spacing:.3px}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:52px;height:52px;border-radius:50%}
+.brand span{font-family:'Playfair Display',serif;font-weight:800;font-size:19px;color:var(--rasp);letter-spacing:.5px;line-height:1.05}
+.brand small{display:block;font-family:Jost;font-weight:500;font-size:11.5px;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+.links{display:flex;gap:30px;font-weight:500;font-size:15px}
+.links a:hover{color:var(--rasp)}
+.cta{background:var(--rasp);color:#fff;border:0;border-radius:999px;padding:12px 22px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:.2s}
+.cta:hover{background:var(--rasp2)}
+.cta.light{background:#fff;color:var(--rasp);border:1.5px solid var(--rasp)}
+.cart-pill{position:relative}
+.cart-pill b{background:#fff;color:var(--rasp);border-radius:999px;font-size:12px;min-width:22px;height:22px;display:inline-grid;place-items:center;padding:0 6px}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--pink3) 0%,#fff 100%);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center;padding-top:54px;padding-bottom:70px}
+.tag{font-family:'Playfair Display',serif;font-style:italic;color:var(--rasp);font-size:22px}
+h1{font-family:'Playfair Display',serif;font-size:62px;line-height:1.04;font-weight:800;margin:10px 0 18px;letter-spacing:-.5px}
+h1 em{font-style:italic;color:var(--rasp);font-weight:500}
+.lead{font-size:18.5px;color:var(--muted);max-width:500px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btns .cta{padding:16px 28px;font-size:16px}
+.facts{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap}
+.facts div b{display:block;font-family:'Playfair Display',serif;font-size:28px;color:var(--rasp);line-height:1}
+.facts div span{font-size:13.5px;color:var(--muted)}
+.visual{position:relative}
+.visual .main{border-radius:28px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(198,45,110,.45);aspect-ratio:4/4.3}
+.visual .main img{width:100%;height:100%;object-fit:cover}
+.visual .bubble{position:absolute;left:-36px;bottom:-30px;width:42%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:8px solid #fff;box-shadow:0 20px 40px -20px rgba(0,0,0,.35)}
+.visual .bubble img{width:100%;height:100%;object-fit:cover}
+.visual .seal{position:absolute;right:-18px;top:-18px;width:120px;border-radius:50%;box-shadow:0 14px 30px -12px rgba(198,45,110,.5);animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* marquee */
+section,.marquee,.hero{max-width:100vw}
+.marquee{background:var(--rasp);color:#fff;overflow:hidden;white-space:nowrap;padding:14px 0;font-family:'Playfair Display',serif;font-style:italic;font-size:19px}
+.marquee div{display:inline-block;animation:mq 28s linear infinite}
+.marquee span{margin:0 26px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:80px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.kick{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--rasp);font-weight:600}
+h2{font-family:'Playfair Display',serif;font-size:46px;line-height:1.1;margin-top:8px;font-weight:700}
+.sub{color:var(--muted);max-width:520px;font-size:16.5px}
+
+/* products */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 26px 50px -30px rgba(198,45,110,.45)}
+.ph{aspect-ratio:4/3.4;overflow:hidden;position:relative;background:var(--kraft2)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.card:hover .ph img{transform:scale(1.04)}
+.badge{position:absolute;left:14px;top:14px;background:#fff;color:var(--rasp);font-weight:600;font-size:12.5px;padding:6px 12px;border-radius:999px}
+.cb{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.cb h3{font-family:'Playfair Display',serif;font-size:23px;line-height:1.2}
+.cb p{color:var(--muted);font-size:14.5px;margin:8px 0 18px;flex:1}
+.row{display:flex;justify-content:space-between;align-items:center}
+.price{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--rasp)}
+.price small{font-family:Jost;font-size:13px;color:var(--muted);font-weight:500}
+.qty{display:flex;align-items:center;gap:6px;background:var(--pink3);border-radius:999px;padding:4px}
+.qty button{width:36px;height:36px;border-radius:50%;border:0;background:#fff;cursor:pointer;font-size:19px;font-weight:600;color:var(--rasp)}
+.qty button:hover{background:var(--rasp);color:#fff}
+.qty span{min-width:22px;text-align:center;font-weight:700}
+
+/* big box banner */
+.events{background:var(--kraft2)}
+.ev{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.ev .imgs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ev .imgs img{border-radius:22px;width:100%;height:100%;object-fit:cover;aspect-ratio:3/3.6}
+.ev .imgs img:first-child{margin-top:40px}
+.ev ul{list-style:none;margin:22px 0}
+.ev li{padding:10px 0;border-bottom:1px solid #e5d6c6;display:flex;gap:10px}
+
+/* cookies */
+.cookies-top{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center;margin-bottom:34px}
+.cookies-top img{border-radius:26px;aspect-ratio:4/4.4;object-fit:cover;width:100%}
+.meter{background:var(--pink3);border-radius:20px;padding:20px 22px;margin-top:22px}
+.mt{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px;font-size:15px}
+.mt span{color:var(--muted)}
+.mt span.ok{color:#2f7a52;font-weight:600}
+.bar{height:10px;background:#fff;border-radius:999px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--rasp);border-radius:999px;transition:width .3s}
+.bar i.ok{background:#2f7a52}
+.flav{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.fl{border:1px solid var(--line);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:6px;background:#fff}
+.fl .dot{width:46px;height:46px;border-radius:50%;margin-bottom:6px;box-shadow:inset 0 -6px 10px rgba(0,0,0,.12)}
+.fl h4{font-family:'Playfair Display',serif;font-size:18.5px;line-height:1.2}
+.fl .row{margin-top:auto;padding-top:10px}
+.fl .price{font-size:20px}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.gal img{aspect-ratio:1;object-fit:cover;border-radius:16px;width:100%}
+.insta{display:flex;justify-content:center;margin-top:24px}
+
+/* order */
+.order{background:var(--pink3)}
+.ob{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
+.panel{background:#fff;border-radius:24px;padding:26px;border:1px solid var(--line)}
+.panel h3{font-family:'Playfair Display',serif;font-size:24px;margin-bottom:6px}
+label{display:block;font-size:13.5px;font-weight:600;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:14px;background:#fff;outline:none}
 input:focus,select:focus,textarea:focus{border-color:var(--rasp)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.slot{padding:11px 6px;border:1px solid var(--line);border-radius:12px;background:#fff;cursor:pointer;font-size:13.5px;font-weight:600}
+.slot{padding:12px 6px;border:1px solid var(--line);border-radius:14px;background:#fff;cursor:pointer;font-weight:600;font-size:14px}
 .slot.on{background:var(--rasp);border-color:var(--rasp);color:#fff}
+.line{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.empty{color:var(--muted);font-size:14.5px;padding:8px 0 12px}
+.tot{display:flex;justify-content:space-between;font-family:'Playfair Display',serif;font-weight:700;font-size:24px;margin-top:14px}
+.warn{background:#fff4e5;color:#8a5200;border-radius:12px;padding:10px 12px;font-size:14px;margin-top:12px;display:none}
 .pay{display:grid;gap:10px}
-.payopt{display:flex;gap:12px;align-items:center;border:1.5px solid var(--line);border-radius:14px;padding:13px 14px;cursor:pointer;background:#fff}
-.payopt.on{border-color:var(--rasp);background:#fff7fa}
-.payopt input{width:auto}
-.payopt b{display:block;font-size:14.5px}
-.payopt small{color:var(--muted);font-size:12.5px}
-.cards{margin-left:auto;display:flex;gap:6px}
-.cards em{font-style:normal;font-size:10.5px;font-weight:800;padding:4px 7px;border-radius:6px;color:#fff}
-.cart-line{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
-.empty{color:var(--muted);font-size:14px;padding:6px 0 10px}
-.tot{display:flex;justify-content:space-between;font-weight:800;font-size:19px;margin-top:12px}
-.paybtn{width:100%;margin-top:16px;font-size:16px}
-.secure{text-align:center;font-size:12.5px;color:var(--muted);margin-top:10px}
-.faq{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
-.faq div{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px}
-.faq b{display:block;margin-bottom:4px}
-.faq p{font-size:14.5px;color:var(--muted)}
-footer{background:var(--ink);color:#eadbe0;padding:40px 0 100px;text-align:center;font-size:14px}
-footer a{color:#fff;font-weight:600}
-.sticky{position:fixed;left:12px;right:12px;bottom:12px;display:none;z-index:20}
-.sticky a{display:flex;justify-content:space-between;background:var(--rasp);color:#fff;padding:15px 18px;border-radius:999px;font-weight:700;box-shadow:0 12px 30px -10px rgba(179,49,95,.6)}
-.modal{position:fixed;inset:0;background:rgba(43,29,34,.55);display:none;align-items:center;justify-content:center;padding:16px;z-index:30}
+.po{display:flex;gap:12px;align-items:center;border:1.5px solid var(--line);border-radius:16px;padding:13px 14px;cursor:pointer}
+.po.on{border-color:var(--rasp);background:var(--pink3)}
+.po input{width:auto;accent-color:var(--rasp)}
+.po b{display:block;font-size:15px}
+.po small{color:var(--muted)}
+.logos{margin-left:auto;display:flex;gap:5px}
+.logos em{font-style:normal;font-size:10.5px;font-weight:700;color:#fff;padding:4px 7px;border-radius:6px}
+.go{width:100%;margin-top:18px;justify-content:center;padding:17px;font-size:16.5px}
+.secure{text-align:center;font-size:13px;color:var(--muted);margin-top:10px}
+
+footer{background:var(--pink);color:var(--ink);padding:56px 0 110px;text-align:center}
+footer img{width:110px;margin:0 auto 14px;border-radius:50%}
+footer p{max-width:520px;margin:0 auto;color:#5c2440}
+footer .fl2{display:flex;gap:12px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+footer .fl2 a{background:#fff;color:var(--rasp);padding:10px 18px;border-radius:999px;font-weight:600}
+.made{margin-top:26px;font-size:12.5px;color:#7a3a58}
+
+.sticky{position:fixed;left:14px;right:14px;bottom:14px;z-index:40;display:none}
+.sticky a{display:flex;justify-content:space-between;align-items:center;background:var(--rasp);color:#fff;border-radius:999px;padding:15px 22px;font-weight:600;box-shadow:0 14px 34px -12px rgba(198,45,110,.7)}
+.modal{position:fixed;inset:0;background:rgba(42,26,32,.55);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
 .modal.on{display:flex}
-.box{background:#fff;border-radius:22px;max-width:420px;width:100%;padding:26px}
-.box h3{font-family:Fraunces,serif;font-size:24px;margin-bottom:8px}
-.box p{color:var(--muted);font-size:14.5px;margin-bottom:12px}
-.recap{background:var(--cream);border-radius:14px;padding:14px;font-size:14px;margin-bottom:14px}
-@media(max-width:880px){.hero,.order{grid-template-columns:1fr}.cat,.steps,.faq{grid-template-columns:1fr}h1{font-size:44px}h2{font-size:34px}.nav-cta{display:none}.sticky{display:block}.visual{aspect-ratio:4/3}}
-@media(max-width:420px){.two{grid-template-columns:1fr}.slots{grid-template-columns:repeat(2,1fr)}}
+.box{background:#fff;border-radius:26px;max-width:440px;width:100%;padding:28px;text-align:center}
+.box img{width:84px;margin:0 auto 10px;border-radius:50%}
+.box h3{font-family:'Playfair Display',serif;font-size:26px}
+.box p{color:var(--muted);font-size:14.5px;margin:6px 0 14px}
+.recap{background:var(--pink3);border-radius:16px;padding:14px;text-align:left;font-size:14.5px;margin-bottom:16px;line-height:1.7}
+
+@media(max-width:980px){.hero .wrap,.ev,.cookies-top,.ob{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.flav{grid-template-columns:1fr 1fr}.gal{grid-template-columns:repeat(3,1fr)}h1{font-size:46px}.links{display:none}.visual .bubble{left:-8px}.visual .seal{right:-6px;width:96px}.sticky{display:block}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}h1{font-size:40px}h2{font-size:34px}.two{grid-template-columns:1fr}.slots{grid-template-columns:repeat(2,1fr)}.nav .cta.hide{display:none}.ev .imgs img:first-child{margin-top:20px}section{padding:60px 0}.brand small{display:none}}
 </style>
 </head>
 <body>
-<div class="demo">Maquette gratuite préparée pour The Brunch Box par Clarity Digital · non publiée · cookies à vos prix · brunch box en exemple</div>
-<div class="wrap">
-  <nav><div class="logo"><i>TBB</i>The Brunch Box</div><a class="nav-cta" href="#commander">Commander</a></nav>
-  <div class="hero">
+<div class="demo">Maquette préparée pour The Brunch Box par Clarity Digital · version 2 · non publiée</div>
+
+<header><div class="wrap nav">
+  <a class="brand" href="#"><img src="img/logo.png" alt="The Brunch Box"><span>The Brunch Box<small>Brunch &amp; cookies · Alger</small></span></a>
+  <nav class="links"><a href="#brunch">Brunch box</a><a href="#events">Équipes &amp; événements</a><a href="#cookies">Cookies</a><a href="#commander">Commander</a></nav>
+  <a class="cta cart-pill" href="#commander">Panier <b id="ncart">0</b></a>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div>
+    <div class="tag">Unlimited Happiness</div>
+    <h1>Le brunch <em>premium</em>,<br>livré chez vous.</h1>
+    <p class="lead">Brunch box généreuses et cookies style New-Yorkais, préparés le jour même et livrés 7j/7 sur Alger. Choisissez votre box, le jour et l'heure de livraison, et payez en ligne.</p>
+    <div class="btns"><a class="cta" href="#brunch">Découvrir les box</a><a class="cta light" href="#cookies">Nos cookies</a></div>
+    <div class="facts"><div><b>101k</b><span>abonnés Instagram</span></div><div><b>7j/7</b><span>livraison sur Alger</span></div><div><b>1 à 12</b><span>personnes par box</span></div></div>
+  </div>
+  <div class="visual">
+    <div class="main"><img src="img/box-lid-signature.jpg" alt="Brunch box signature The Brunch Box"></div>
+    <div class="bubble"><img src="img/bowl-kiwi.jpg" alt="Granola bowl"></div>
+    <img class="seal" src="img/logo.png" alt="">
+  </div>
+</div></div>
+
+<div class="marquee"><div><span>Brunch box</span>✦<span>Cookies New-Yorkais</span>✦<span>Livraison 7j/7 sur Alger</span>✦<span>Prêts à offrir</span>✦<span>Équipes &amp; événements</span>✦<span>Brunch box</span>✦<span>Cookies New-Yorkais</span>✦<span>Livraison 7j/7 sur Alger</span>✦<span>Prêts à offrir</span>✦<span>Équipes &amp; événements</span>✦</div></div>
+
+<section id="brunch"><div class="wrap">
+  <div class="head"><div><div class="kick">Nos brunch box</div><h2 class="serif">Pour vous, à deux,<br>ou pour toute la tablée</h2></div><p class="sub">Viennoiseries, finger sandwichs, avocado toast, granola bowl, fruits frais et jus pressés : tout est prêt, il n'y a plus qu'à ouvrir la box.</p></div>
+  <div class="grid" id="gb"></div>
+</div></section>
+
+<section class="events" id="events"><div class="wrap ev">
+  <div class="imgs"><img src="img/avocado-box.jpg" alt="Avocado toast box"><img src="img/box-sandwich.jpg" alt="Box finger sandwichs et cookies"></div>
+  <div>
+    <div class="kick">Équipes · réunions · événements</div>
+    <h2 class="serif">Les grandes box, pour partager</h2>
+    <p class="sub" style="margin-top:12px">Un petit-déjeuner d'équipe, un anniversaire, une réunion de famille : on prépare des box de 6 à 12 personnes, livrées à l'heure.</p>
+    <ul>
+      <li>🥑 <span><b>Avocado toast box</b> · 6 à 12 pers · 9 800 DA</span></li>
+      <li>🥪 <span><b>Box finger sandwichs, fruits &amp; cookies</b> · sur devis</span></li>
+      <li>🎁 <span><b>Prêtes à offrir</b> avec votre petit mot</span></li>
+    </ul>
+    <a class="cta" href="#commander">Commander une grande box</a>
+  </div>
+</div></section>
+
+<section id="cookies"><div class="wrap">
+  <div class="cookies-top">
+    <img src="img/cookies-figs.jpg" alt="Box de cookies The Brunch Box">
     <div>
-      <span class="kick">Livraison 7j/7 · Alger</span>
-      <h1>Le brunch <em>premium</em> livré chez vous.</h1>
-      <p class="lead">Brunch box généreuses et cookies style New-Yorkais. Choisissez votre box, la date et l'heure de livraison, puis payez en ligne en 1 minute.</p>
-      <div class="btns"><a class="btn" href="#box">Brunch box</a><a class="btn alt" href="#cookies">Cookies</a></div>
-      <div class="badges"><span>💗 101k abonnés</span><span>🚚 7j/7 sur Alger</span><span>💳 CIB · Edahabia</span></div>
-    </div>
-    <div class="visual"><div class="plate p1"></div><div class="plate p2"></div><div class="plate p3"></div><span class="ph">Vos photos de box ici</span></div>
-  </div>
-</div>
-
-<section style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <span class="kick">Comment ça marche</span>
-    <h2>Commandez en 3 étapes</h2>
-    <div class="steps">
-      <div class="step"><b>1</b><h3>Brunch box ou cookies</h3><p>Une brunch box, ou vos cookies au choix (minimum 10), ou les deux.</p></div>
-      <div class="step"><b>2</b><h3>Date &amp; heure</h3><p>Choisissez le jour et le créneau de livraison, pour vous ou pour offrir.</p></div>
-      <div class="step"><b>3</b><h3>Payez en ligne</h3><p>Carte CIB ou Edahabia, paiement sécurisé. Ou à la livraison si vous préférez.</p></div>
+      <div class="kick">Cookies style New-Yorkais</div>
+      <h2 class="serif">Composez votre box de cookies</h2>
+      <p class="sub" style="margin-top:12px">Épais, fondants à cœur, à choisir parmi nos 8 parfums. Minimum 10 pièces au choix. Avec une brunch box, ajoutez-en à l'unité, sans minimum.</p>
+      <div class="meter"><div class="mt"><b id="cc">0 cookie</b><span id="cm">Minimum 10 pièces au choix</span></div><div class="bar"><i id="cbar"></i></div></div>
     </div>
   </div>
-</section>
+  <div class="flav" id="gc"></div>
+</div></section>
 
-<section id="box">
-  <div class="wrap">
-    <span class="kick">Brunch box</span>
-    <h2>Nos brunch box</h2>
-    <p class="sub">Préparées le jour même, avec des produits frais. Envie de cookies en plus ? Ajoutez-les à l'unité juste en dessous.</p>
-    <div class="cat" id="cat"></div>
+<section style="padding-top:0"><div class="wrap">
+  <div class="head" style="justify-content:center;text-align:center"><div><div class="kick">@thebrunchbox_dz</div><h2 class="serif">Vu sur Instagram</h2></div></div>
+  <div class="gal">
+    <img src="img/duo-box.jpg" alt=""><img src="img/cookies-fruits.jpg" alt=""><img src="img/bowl.jpg" alt=""><img src="img/box-marble.jpg" alt=""><img src="img/box-pancake.jpg" alt=""><img src="img/box-lid-pancake.jpg" alt="">
   </div>
-</section>
+  <div class="insta"><a class="cta light" href="https://www.instagram.com/thebrunchbox_dz/">Suivre @thebrunchbox_dz</a></div>
+</div></section>
 
-<section id="cookies" style="padding-top:0">
-  <div class="wrap">
-    <span class="kick">Cookies style New-Yorkais</span>
-    <h2>Composez votre box de cookies</h2>
-    <p class="sub">Choisissez vos parfums, minimum 10 pièces au choix. Avec une brunch box, les cookies s'ajoutent à l'unité, sans minimum.</p>
-    <div class="meter"><div class="mtxt"><b id="ccount">0 cookie</b><span id="cmsg">Minimum 10 pièces au choix</span></div><div class="bar"><i id="cbar"></i></div></div>
-    <div class="cat" id="ccat"></div>
-    <p class="note">Cookies et prix : votre carte. Les brunch box et les photos restent des exemples, à remplacer par les vôtres.</p>
-  </div>
-</section>
-
-<section id="commander" style="background:var(--paper);border-top:1px solid var(--line)">
-  <div class="wrap">
-    <span class="kick">Commander</span>
-    <h2>Votre livraison</h2>
-    <div class="order">
-      <div class="panel">
-        <h3>Quand et où ?</h3>
-        <div class="two">
-          <div><label for="date">Date de livraison</label><input type="date" id="date"></div>
-          <div><label for="zone">Commune</label><select id="zone"></select></div>
-        </div>
-        <label>Créneau horaire</label>
-        <div class="slots" id="slots"></div>
-        <div class="two">
-          <div><label for="nom">Nom</label><input id="nom" placeholder="Votre nom"></div>
-          <div><label for="tel">Téléphone</label><input id="tel" placeholder="05 / 06 / 07 …" inputmode="tel"></div>
-        </div>
-        <label for="adr">Adresse</label><input id="adr" placeholder="Quartier, rue, étage">
-        <label for="msg">Petit mot (si c'est un cadeau)</label><textarea id="msg" rows="2" placeholder="Joyeux anniversaire …"></textarea>
+<section class="order" id="commander"><div class="wrap">
+  <div class="head"><div><div class="kick">Commander</div><h2 class="serif">Votre livraison</h2></div><p class="sub">Choisissez le jour et l'heure : on s'occupe du reste.</p></div>
+  <div class="ob">
+    <div class="panel">
+      <h3>Quand et où ?</h3>
+      <div class="two">
+        <div><label for="date">Date de livraison</label><input type="date" id="date"></div>
+        <div><label for="zone">Commune</label><select id="zone"></select></div>
       </div>
-      <div class="panel">
-        <h3>Votre panier</h3>
-        <div id="lines"></div>
-        <div class="cart-line"><span>Livraison</span><span id="fee">—</span></div>
-        <div class="tot"><span>Total</span><span id="total">0 DA</span></div>
-        <div class="warn" id="warn"></div>
-        <label>Paiement</label>
-        <div class="pay">
-          <label class="payopt on" data-p="card"><input type="radio" name="p" checked><div><b>Carte CIB / Edahabia</b><small>Paiement en ligne sécurisé</small></div><span class="cards"><em style="background:#1b5e9a">CIB</em><em style="background:#e2a400">EDAHABIA</em></span></label>
-          <label class="payopt" data-p="cod"><input type="radio" name="p"><div><b>À la livraison</b><small>Espèces au livreur</small></div></label>
-        </div>
-        <button class="btn paybtn" id="go">Payer 0 DA</button>
-        <p class="secure">🔒 Paiement sécurisé · confirmation par SMS</p>
+      <label>Heure de livraison</label>
+      <div class="slots" id="slots"></div>
+      <div class="two">
+        <div><label for="nom">Nom</label><input id="nom" placeholder="Votre nom"></div>
+        <div><label for="tel">Téléphone</label><input id="tel" placeholder="05 / 06 / 07 …" inputmode="tel"></div>
       </div>
+      <label for="adr">Adresse</label><input id="adr" placeholder="Quartier, rue, étage">
+      <label for="msg">Un petit mot à glisser dans la box ?</label><textarea id="msg" rows="2" placeholder="Joyeux anniversaire …"></textarea>
+    </div>
+    <div class="panel">
+      <h3>Votre panier</h3>
+      <div id="lines"></div>
+      <div class="line"><span>Livraison</span><span id="fee">—</span></div>
+      <div class="tot"><span>Total</span><span id="total">0 DA</span></div>
+      <div class="warn" id="warn"></div>
+      <label>Paiement</label>
+      <div class="pay">
+        <label class="po on" data-p="card"><input type="radio" name="p" checked><div><b>Carte CIB / Edahabia</b><small>Paiement en ligne sécurisé</small></div><span class="logos"><em style="background:#1b5e9a">CIB</em><em style="background:#d99a00">EDAHABIA</em></span></label>
+        <label class="po" data-p="cod"><input type="radio" name="p"><div><b>À la livraison</b><small>Espèces au livreur</small></div></label>
+      </div>
+      <button class="cta go" id="go">Payer 0 DA</button>
+      <p class="secure">🔒 Paiement sécurisé · confirmation par SMS</p>
     </div>
   </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <span class="kick">Questions</span>
-    <h2>Bon à savoir</h2>
-    <div class="faq">
-      <div><b>Jusqu'à quand commander ?</b><p>La veille pour le matin, ou quelques heures avant pour l'après-midi (selon vos créneaux).</p></div>
-      <div><b>Où livrez-vous ?</b><p>Partout sur Alger, 7j/7. Les frais dépendent de la commune.</p></div>
-      <div><b>Pour offrir ?</b><p>Anniversaire, Octobre Rose, surprise : ajoutez un petit mot, on le glisse dans la box.</p></div>
-      <div><b>Une grosse commande ?</b><p>Événement, bureau, réunion de famille : écrivez-nous sur WhatsApp pour un devis.</p></div>
-    </div>
-  </div>
-</section>
+</div></section>
 
 <footer>
-  <div class="logo" style="justify-content:center;color:#fff;margin-bottom:10px"><i>TBB</i>The Brunch Box</div>
-  Brunch premium &amp; cookies style New-Yorkais · Livraison 7j/7 à Alger<br><br>
-  <a href="https://wa.me/213770413734">WhatsApp</a> · <a href="https://www.instagram.com/thebrunchbox_dz/">Instagram</a><br><br>
-  <span style="opacity:.7">Maquette réalisée par Clarity Digital</span>
+  <img src="img/logo.png" alt="The Brunch Box">
+  <p>Brunch premium &amp; cookies style New-Yorkais, livrés 7j/7 sur Alger.</p>
+  <div class="fl2"><a href="https://wa.me/c/213770413734">Catalogue WhatsApp</a><a href="https://www.instagram.com/thebrunchbox_dz/">Instagram</a></div>
+  <div class="made">Maquette réalisée par Clarity Digital</div>
 </footer>
 
-<div class="sticky"><a href="#commander"><span>🧺 Panier</span><span id="stot">0 DA</span></a></div>
+<div class="sticky"><a href="#commander"><span>🧺 Mon panier</span><span id="stot">0 DA</span></a></div>
 
 <div class="modal" id="modal"><div class="box">
-  <h3 id="mt">Paiement par carte</h3>
-  <p id="mp">Dans le vrai site, le client est redirigé vers la page de paiement sécurisée CIB / Edahabia, puis revient sur une page de confirmation. Vous recevez la commande avec la date et l'heure.</p>
+  <img src="img/logo.png" alt="">
+  <h3 id="mt">Merci !</h3>
+  <p id="mp"></p>
   <div class="recap" id="recap"></div>
-  <button class="btn" style="width:100%" onclick="document.getElementById('modal').classList.remove('on')">Fermer</button>
+  <button class="cta" style="width:100%;justify-content:center" onclick="document.getElementById('modal').classList.remove('on')">Fermer</button>
 </div></div>
 
 <script>
 const BOX=[
- {id:'solo',n:'Brunch Box Solo',d:'Viennoiseries, mini sandwichs, œuf, salade de fruits, granola et jus frais.',p:2900,e:'🥐',bg:'#fde8ef',t:'Pour 1',k:'b'},
- {id:'duo',n:'Brunch Box Duo',d:'La box à deux : sandwichs, fruits frais, bowls granola, pancakes et 2 jus.',p:5400,e:'🥞',bg:'#fff1dc',t:'Pour 2',k:'b'},
- {id:'share',n:'Box à partager',d:'Le grand plateau pour 4 à 6 : salé, sucré, fruits et boissons.',p:11900,e:'🧺',bg:'#e9f3ea',t:'4–6 pers.',k:'b'},
- {id:'c1',n:'Chocolat au lait',d:'Le classique fondant au chocolat au lait.',p:450,e:'🍪',bg:'#f3e6da',t:'Cookie',k:'c'},
- {id:'c2',n:'Chocolat noir',d:'Intense, pour les amateurs de cacao.',p:450,e:'🍪',bg:'#e9dccf',t:'Cookie',k:'c'},
- {id:'c3',n:'Chocolat blanc',d:'Doux et gourmand, pépites de chocolat blanc.',p:450,e:'🍪',bg:'#fbf1e4',t:'Cookie',k:'c'},
- {id:'c4',n:'Triple chocolat',d:'Lait, noir et blanc dans un seul cookie.',p:550,e:'🍪',bg:'#efe1d4',t:'Best-seller',k:'c'},
- {id:'c5',n:'Sésame noir',d:'Original et subtil, au sésame noir.',p:600,e:'🍪',bg:'#e4e1e3',t:'Signature',k:'c'},
- {id:'c6',n:'Matcha',d:'Thé vert matcha, couleur et goût uniques.',p:600,e:'🍪',bg:'#e3efd9',t:'Signature',k:'c'},
- {id:'c7',n:'Miso chocolat blanc',d:'Le sucré-salé qui surprend.',p:600,e:'🍪',bg:'#f6ecdc',t:'Signature',k:'c'},
- {id:'c8',n:'Spéculoos',d:'Biscuit spéculoos et notes caramel.',p:600,e:'🍪',bg:'#f6e3cc',t:'Signature',k:'c'}
+ {id:'b1',n:'Brunch box pour 1 personne',d:'Viennoiserie, avocado toast, granola bowl, fruits frais, cookie et jus pressé.',p:3600,img:'box-lid-pancake',t:'Solo',k:'b'},
+ {id:'b2',n:'Brunch box avec pancakes',d:'Pancakes aux amandes, œufs brouillés &amp; avocat, avocado toast au saumon, fruits et jus.',p:4400,img:'box-pancake',t:'Gourmande',k:'b'},
+ {id:'b3',n:'Brunch box signature avec finger sandwichs',d:'Finger sandwichs, granola bowl, avocado toast, pancakes, fruits frais et jus pressés.',p:4900,img:'box-lid-signature',t:'Signature',k:'b'},
+ {id:'b4',n:'Duo brunch box viennoiseries',d:'Pour 2 : viennoiseries, finger sandwichs, granola bowl, avocado toast, madeleines et 2 jus.',p:5800,img:'duo-box',t:'Pour 2',k:'b'},
+ {id:'b5',n:'Box duo avec 2 avocado toasts',d:'Pour 2 : finger sandwichs, 2 avocado toasts, granola bowl, viennoiseries et 2 jus.',p:7300,img:'box-marble',t:'Pour 2',k:'b'},
+ {id:'b6',n:'Granola bowl',d:'Yaourt, granola maison au chocolat, fruits frais, amandes et graines de chia.',p:800,img:'bowl-kiwi',t:'À ajouter',k:'b'},
+ {id:'c1',n:'Chocolat au lait',p:450,col:'#b07a4f',k:'c'},
+ {id:'c2',n:'Chocolat noir',p:450,col:'#5a3424',k:'c'},
+ {id:'c3',n:'Chocolat blanc',p:450,col:'#efe2c9',k:'c'},
+ {id:'c4',n:'Triple chocolat',p:550,col:'#7a4a2e',k:'c',t:'Best-seller'},
+ {id:'c5',n:'Sésame noir',p:600,col:'#3b3436',k:'c'},
+ {id:'c6',n:'Matcha',p:600,col:'#8fae5a',k:'c'},
+ {id:'c7',n:'Miso chocolat blanc',p:600,col:'#e6c79a',k:'c'},
+ {id:'c8',n:'Spéculoos',p:600,col:'#c58a4f',k:'c'}
 ];
 const MIN=10;
-const ZONES=[['Alger-Centre',400],['Hydra',400],['El Biar',400],['Ben Aknoun',400],['Kouba',450],['Bir Mourad Raïs',450],['Dely Ibrahim',500],['Chéraga',500],['Bab Ezzouar',500],['Draria',600],['Saïd Hamdine',400],['Bordj El Kiffan',600]];
+const ZONES=[['Alger-Centre',400],['Hydra',400],['El Biar',400],['Ben Aknoun',400],['Dely Ibrahim',500],['Chéraga',500],['Kouba',450],['Bir Mourad Raïs',450],['Saïd Hamdine',400],['Bab Ezzouar',500],['Draria',600],['Bordj El Kiffan',600]];
 const SLOTS=['08h–10h','10h–12h','12h–14h','14h–16h','16h–18h','18h–20h'];
-const cart={};let slot=SLOTS[0];let pay='card';
+const cart={};let slot=SLOTS[0],pay='card';
 const f=n=>n.toLocaleString('fr-FR').replace(/ /g,' ')+' DA';
-const card=b=>`<div class="card"><div class="thumb" style="background:${b.bg}"><small>${b.t}</small>${b.e}</div><div class="cbody"><h3>${b.n}</h3><p>${b.d}</p><div class="row"><span class="price">${f(b.p)}${b.k=='c'?' <small style="font-weight:500;color:var(--muted);font-size:13px">/ pièce</small>':''}</span><div class="qty"><button data-id="${b.id}" data-d="-1">−</button><span id="q-${b.id}">0</span><button data-id="${b.id}" data-d="1">+</button></div></div></div></div>`;
-BOX.forEach(b=>{cart[b.id]=0;document.getElementById(b.k=='b'?'cat':'ccat').insertAdjacentHTML('beforeend',card(b))});
-document.querySelectorAll('#cat,#ccat').forEach(c=>c.addEventListener('click',e=>{const t=e.target.closest('button');if(!t)return;cart[t.dataset.id]=Math.max(0,cart[t.dataset.id]+ +t.dataset.d);document.getElementById('q-'+t.dataset.id).textContent=cart[t.dataset.id];render()}));
+const q=b=>`<div class="qty"><button data-id="${b.id}" data-d="-1" aria-label="moins">−</button><span id="q-${b.id}">0</span><button data-id="${b.id}" data-d="1" aria-label="plus">+</button></div>`;
+BOX.forEach(b=>{cart[b.id]=0;
+ if(b.k=='b')document.getElementById('gb').insertAdjacentHTML('beforeend',`<div class="card"><div class="ph"><img src="img/${b.img}.jpg" alt="${b.n}" loading="lazy"><span class="badge">${b.t}</span></div><div class="cb"><h3>${b.n}</h3><p>${b.d}</p><div class="row"><span class="price">${f(b.p)}</span>${q(b)}</div></div></div>`);
+ else document.getElementById('gc').insertAdjacentHTML('beforeend',`<div class="fl"><div class="dot" style="background:radial-gradient(circle at 35% 30%,#fff7,transparent 45%),${b.col}"></div><h4>${b.n}</h4>${b.t?'<span class="badge" style="position:static;align-self:flex-start;background:var(--pink3)">'+b.t+'</span>':''}<div class="row"><span class="price">${f(b.p)}</span>${q(b)}</div></div>`)});
+document.body.addEventListener('click',e=>{const t=e.target.closest('.qty button');if(!t)return;const id=t.dataset.id;cart[id]=Math.max(0,cart[id]+ +t.dataset.d);document.getElementById('q-'+id).textContent=cart[id];render()});
 const zone=document.getElementById('zone');ZONES.forEach(([z,p],i)=>zone.insertAdjacentHTML('beforeend',`<option value="${i}">${z} · ${f(p)}</option>`));zone.onchange=render;
 const sl=document.getElementById('slots');SLOTS.forEach((s,i)=>sl.insertAdjacentHTML('beforeend',`<button type="button" class="slot${i?'':' on'}">${s}</button>`));
 sl.addEventListener('click',e=>{const t=e.target.closest('.slot');if(!t)return;sl.querySelectorAll('.slot').forEach(x=>x.classList.remove('on'));t.classList.add('on');slot=t.textContent});
-const d=document.getElementById('date');const tm=new Date();tm.setDate(tm.getDate()+1);const iso=x=>x.toISOString().slice(0,10);d.min=iso(new Date());d.value=iso(tm);
-document.querySelectorAll('.payopt').forEach(o=>o.addEventListener('click',()=>{document.querySelectorAll('.payopt').forEach(x=>x.classList.remove('on'));o.classList.add('on');o.querySelector('input').checked=true;pay=o.dataset.p;render()}));
+const d=document.getElementById('date');const tm=new Date();tm.setDate(tm.getDate()+1);const iso=x=>new Date(x.getTime()-x.getTimezoneOffset()*6e4).toISOString().slice(0,10);d.min=iso(new Date());d.value=iso(tm);
+document.querySelectorAll('.po').forEach(o=>o.addEventListener('click',()=>{document.querySelectorAll('.po').forEach(x=>x.classList.remove('on'));o.classList.add('on');o.querySelector('input').checked=true;pay=o.dataset.p;render()}));
 const cnt=k=>BOX.filter(b=>b.k==k).reduce((s,b)=>s+cart[b.id],0);
-function sum(){return BOX.reduce((s,b)=>s+b.p*cart[b.id],0)}
-function ok(){const nb=cnt('b'),nc=cnt('c');return (nb+nc)>0&&(nb>0||nc>=MIN)}
+const sum=()=>BOX.reduce((s,b)=>s+b.p*cart[b.id],0);
+const ok=()=>{const nb=cnt('b'),nc=cnt('c');return nb+nc>0&&(nb>0||nc>=MIN)};
+const label=b=>b.k=='c'?'Cookie '+b.n.toLowerCase():b.n;
 function render(){
  const nb=cnt('b'),nc=cnt('c');
- document.getElementById('ccount').textContent=nc+(nc>1?' cookies':' cookie');
- const msg=document.getElementById('cmsg'),bar=document.getElementById('cbar');
- bar.style.width=Math.min(100,nc/MIN*100)+'%';
- if(nb>0){msg.textContent='Avec votre brunch box : cookies à l\'unité, sans minimum ✓';msg.className='ok';bar.style.width='100%';bar.className='ok'}
- else if(nc>=MIN){msg.textContent='Minimum atteint ✓ ajoutez-en autant que vous voulez';msg.className='ok';bar.className='ok'}
- else{msg.textContent=nc?`Encore ${MIN-nc} pour atteindre le minimum de ${MIN}`:`Minimum ${MIN} pièces au choix`;msg.className='';bar.className=''}
- const L=document.getElementById('lines');const items=BOX.filter(b=>cart[b.id]);
- L.innerHTML=items.length?items.map(b=>`<div class="cart-line"><span>${cart[b.id]} × ${b.k=='c'?'Cookie '+b.n:b.n}</span><span>${f(b.p*cart[b.id])}</span></div>`).join(''):'<p class="empty">Ajoutez une brunch box ou vos cookies avec le bouton +</p>';
+ document.getElementById('cc').textContent=nc+(nc>1?' cookies':' cookie');
+ const m=document.getElementById('cm'),bar=document.getElementById('cbar');
+ if(nb>0){m.textContent='Avec votre brunch box : à l\'unité, sans minimum ✓';m.className='ok';bar.style.width='100%';bar.className='ok'}
+ else if(nc>=MIN){m.textContent='Minimum atteint ✓';m.className='ok';bar.style.width='100%';bar.className='ok'}
+ else{m.textContent=nc?`Encore ${MIN-nc} pour atteindre le minimum`:`Minimum ${MIN} pièces au choix`;m.className='';bar.style.width=(nc/MIN*100)+'%';bar.className=''}
+ const items=BOX.filter(b=>cart[b.id]);
+ document.getElementById('lines').innerHTML=items.length?items.map(b=>`<div class="line"><span>${cart[b.id]} × ${label(b)}</span><span>${f(b.p*cart[b.id])}</span></div>`).join(''):'<p class="empty">Votre panier est vide : ajoutez une brunch box ou vos cookies.</p>';
  const fee=items.length?ZONES[zone.value][1]:0;document.getElementById('fee').textContent=items.length?f(fee):'—';
  const t=sum()+fee;document.getElementById('total').textContent=f(t);document.getElementById('stot').textContent=f(t);
- const w=document.getElementById('warn');if(items.length&&!ok()){w.style.display='block';w.textContent=`Commande de cookies : minimum ${MIN} pièces au choix (encore ${MIN-nc}). Ou ajoutez une brunch box.`}else w.style.display='none';
- const g=document.getElementById('go');g.textContent=(pay=='card'?'Payer ':'Commander · ')+f(t);g.style.opacity=ok()?1:.5}
-document.getElementById('go').onclick=()=>{if(!sum()){document.getElementById('box').scrollIntoView();return}if(!ok()){document.getElementById('cookies').scrollIntoView();return}const m=document.getElementById('modal');document.getElementById('mt').textContent=pay=='card'?'Paiement par carte (démo)':'Commande envoyée (démo)';document.getElementById('mp').textContent=pay=='card'?"Dans le vrai site, le client est redirigé vers la page de paiement sécurisée CIB / Edahabia, puis revient sur une page de confirmation. Vous recevez la commande avec la date et l'heure.":"Dans le vrai site, la commande vous arrive directement (WhatsApp / e-mail / tableau) avec la date et l'heure, et le client reçoit une confirmation.";const dt=new Date(d.value+'T12:00').toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'});document.getElementById('recap').innerHTML=BOX.filter(b=>cart[b.id]).map(b=>cart[b.id]+' × '+(b.k=='c'?'Cookie '+b.n:b.n)).join('<br>')+`<br><br>📅 ${dt} · ${slot}<br>📍 ${ZONES[zone.value][0]}<br><b>Total : ${document.getElementById('total').textContent}</b>`;m.classList.add('on')};
+ document.getElementById('ncart').textContent=items.reduce((s,b)=>s+cart[b.id],0);
+ const w=document.getElementById('warn');if(items.length&&!ok()){w.style.display='block';w.textContent=`Cookies seuls : minimum ${MIN} pièces au choix (encore ${MIN-nc}). Ou ajoutez une brunch box.`}else w.style.display='none';
+ const g=document.getElementById('go');g.textContent=(pay=='card'?'Payer ':'Commander · ')+f(t);g.style.opacity=ok()?1:.55}
+document.getElementById('go').onclick=()=>{if(!sum()){document.getElementById('brunch').scrollIntoView();return}if(!ok()){document.getElementById('cookies').scrollIntoView();return}
+ document.getElementById('mt').textContent=pay=='card'?'Paiement par carte (démo)':'Commande reçue (démo)';
+ document.getElementById('mp').textContent=pay=='card'?"Sur le vrai site, le client paie par CIB ou Edahabia puis reçoit sa confirmation. Vous recevez la commande avec la date et l'heure.":"Sur le vrai site, la commande vous arrive directement avec la date et l'heure, et le client reçoit une confirmation.";
+ const dt=new Date(d.value+'T12:00').toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'});
+ document.getElementById('recap').innerHTML=BOX.filter(b=>cart[b.id]).map(b=>cart[b.id]+' × '+label(b)).join('<br>')+`<br><br>📅 ${dt} · ${slot}<br>📍 ${ZONES[zone.value][0]}<br><b>Total : ${document.getElementById('total').textContent}</b>`;
+ document.getElementById('modal').classList.add('on')};
 render();
 </script>
 </body>
